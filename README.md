@@ -20,8 +20,11 @@ CHAT_ID = 'указываем id вашего чата'
 
 ## В работе использовались:
 Python
+
 Beautiful Soup 4(bs4) 
+
 Requests
+
 Python-telegram-bot
 
 
