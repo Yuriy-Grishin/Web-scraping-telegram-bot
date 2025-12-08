@@ -7,6 +7,7 @@ Web scraping telegram bot
 
 Копируем репозиторий:
 git clone https://github.com/Yuriy-Grishin/Web-scraping-telegram-bot.git
+
 Cоздаем виртуальное окружение:
 python -m venv env
 source venv/bin/activate
