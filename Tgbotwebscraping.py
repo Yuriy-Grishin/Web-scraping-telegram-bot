@@ -11,9 +11,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-BOT_TOKEN = 'BOT_TOKEN'
-CHAT_ID = 'CHAT_ID'
+BOT_TOKEN = os.getenv('BOT_TOKEN')
+CHAT_ID = os.getenv('CHAT_ID')
 
+"""Собираем данные с сайта"""
 def func():
     url = 'https://www.banki.ru/news/lenta/'
     page = requests.get(url)
@@ -21,7 +22,7 @@ def func():
     filteredNews = []
     allNews = []
     soup = BeautifulSoup(page.text, "html.parser")
-
+"""Фильтруем выделенные новости по тематике"""
     allNews =soup.find_all('a',       class_='lf473447f text-weight-medium',          string=re.compile(r'вклад', re.IGNORECASE)) 
 
     for data in allNews:
@@ -32,6 +33,7 @@ def func():
     
     return '  '.join(res)
 
+"""Создаем бота для отправки новостей"""
 async def send_result(update: Update, context: ContextTypes.DEFAULT_TYPE):
     result = func()
     await context.bot.send_message(chat_id=CHAT_ID, text=result)
