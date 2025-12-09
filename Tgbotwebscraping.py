@@ -1,11 +1,11 @@
-import telebot
 import json
 import os
 import requests
 import re
+import telebot
+from telebot import types
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
-from telebot import types
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 
@@ -22,8 +22,9 @@ def func():
     filteredNews = []
     allNews = []
     soup = BeautifulSoup(page.text, "html.parser")
+
 """Фильтруем выделенные новости по тематике"""
-    allNews =soup.find_all('a',       class_='lf473447f text-weight-medium',          string=re.compile(r'вклад', re.IGNORECASE)) 
+    allNews =soup.find_all('a', class_='lf473447f text-weight-medium', string=re.compile(r'вклад', re.IGNORECASE)) 
 
     for data in allNews:
         filteredNews.append(data.text)
