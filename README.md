@@ -11,7 +11,9 @@ git clone https://github.com/Yuriy-Grishin/Web-scraping-telegram-bot.git
 Cоздаем виртуальное окружение:
 python -m venv env
 source venv/bin/activate
+
 Устанавливаем зависимость с requirements.txt:
+
 pip install -r requirements.txt
 
 Создаем файл .env со следующим содержанием:
