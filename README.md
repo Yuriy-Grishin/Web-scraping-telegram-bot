@@ -22,6 +22,10 @@ BOT_TOKEN = 'указываем токен бота'
 
 CHAT_ID = 'указываем id вашего чата'
 
+Запускаем файл tgbotwebsraping.py
+
+Вводим в telegram боте команду /send
+
 ## В работе использовались:
 Python
 
@@ -29,6 +33,10 @@ Beautiful Soup 4(bs4)
 
 Requests
 
+Regex/regexp
+
 Python-telegram-bot
+
+
 
 
