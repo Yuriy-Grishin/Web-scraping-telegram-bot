@@ -1,11 +1,15 @@
 import telebot
-from telebot import types
-from bs4 import BeautifulSoup
+import json
+import os
 import requests
 import re
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
-import json
+from telebot import types
+from bs4 import BeautifulSoup
+from dotenv import load_dotenv
+
+load_dotenv()
 
 BOT_TOKEN = 'BOT_TOKEN'
 CHAT_ID = 'CHAT_ID'
