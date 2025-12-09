@@ -15,6 +15,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 Создаем файл .env со следующим содержанием:
+
 BOT_TOKEN = 'указываем токен бота'
 
 CHAT_ID = 'указываем id вашего чата'
