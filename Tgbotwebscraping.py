@@ -1,5 +1,6 @@
 import requests
 import re
+import os
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 from bs4 import BeautifulSoup
